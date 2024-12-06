@@ -16,7 +16,10 @@ In a shell, navigate to the sample's folder and use the SAM CLI to build a deplo
 ```
 $ sam deploy --s3-bucket $CF_BUCKET --stack-name alt-pet-store --capabilities CAPABILITY_IAM
 ```
-
+Original command line:
+```bash
+$ sam build
+```
 This command compiles the application and prepares a deployment package in the `.aws-sam` sub-directory.
 
 To deploy the application in your AWS account, you can use the SAM CLI's guided deployment process and follow the instructions on the screen
