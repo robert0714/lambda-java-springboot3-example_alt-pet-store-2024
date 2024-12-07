@@ -1,4 +1,4 @@
-package com.amazonaws.serverlesssample.springboot3.controller;
+package com.amazonaws.serverless.sample.springboot3.integration.utils;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

@@ -29,6 +29,8 @@ buildNumber.properties
 gradle/
 build/
 gradlew*
+bin/
+
 
 # Exclude maven wrapper
 !/.mvn/wrapper/maven-wrapper.jar

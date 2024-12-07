@@ -1,4 +1,4 @@
-package com.amazonaws.serverlesssample.springboot3.controller;
+package com.amazonaws.serverless.sample.springboot3.integration.utils;
 
 import software.amazon.awssdk.services.apigateway.ApiGatewayClient;
 import software.amazon.awssdk.services.apigateway.model.ApiGatewayException;
