@@ -77,3 +77,34 @@ $ aws s3 rm s3://${PIPELINE_BUCKET} --recursive
 $ aws cloudformation delete-stack --stack-name alt-pet-store
 ```
 
+# SAM LOCAL
+## Ready
+```bash
+vagrant up
+vagrant ssh
+sudo apt install -y wget unzip
+
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+
+wget https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
+unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
+sudo ./sam-installation/install
+sam --version
+```
+## Test in sam Local
+```bash
+sam local api-test
+```
+another terminal
+```bash
+vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/distance' \
+--header 'Content-Type: application/json' \
+--data '{
+  "startAddress": "基隆市中正區新豐街293號",
+  "endAddress": "新北市板橋區府中路29-2號"
+}'
+```

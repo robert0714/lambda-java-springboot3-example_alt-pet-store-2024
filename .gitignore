@@ -38,3 +38,4 @@ bin/
 # SAM files
 samconfig.toml
 .aws-sam/
+.vagrant/
