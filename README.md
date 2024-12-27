@@ -97,14 +97,16 @@ sam --version
 ```
 ## Test in sam Local
 ```bash
-sam local api-test
+sam local start-api
 ```
 another terminal
 ```bash
-vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/distance' \
+vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/pets' 
+
+vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/pets' \
 --header 'Content-Type: application/json' \
 --data '{
-  "startAddress": "基隆市中正區新豐街293號",
-  "endAddress": "新北市板橋區府中路29-2號"
+  "name": "Robert",
+  "breed": "Norwegian Elkhound"
 }'
 ```
