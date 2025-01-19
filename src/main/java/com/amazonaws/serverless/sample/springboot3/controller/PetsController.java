@@ -14,6 +14,7 @@ package com.amazonaws.serverless.sample.springboot3.controller;
 
 
 
+import com.amazonaws.serverless.sample.springboot3.config.PetProperties;
 import com.amazonaws.serverless.sample.springboot3.model.Pet;
 import com.amazonaws.serverless.sample.springboot3.model.PetData;
 
@@ -35,6 +36,16 @@ import java.util.UUID;
 @EnableWebMvc
 public class PetsController {
 	
+	private final PetProperties props ;
+	public PetsController(final  PetProperties props) {
+		 this.props =  props ;
+	}
+	@RequestMapping(path = "/pets/env", method = RequestMethod.GET)
+    public String getEnv() {   
+		System.out.println("---------------------------");
+		System.out.println(props);
+        return props.getName();
+    }
     @RequestMapping(path = "/pets", method = RequestMethod.POST)
     public Pet createPet(@RequestBody Pet newPet) {
         if (newPet.getName() == null || newPet.getBreed() == null) {

@@ -10,6 +10,7 @@ import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+import com.amazonaws.serverless.sample.springboot3.config.PetProperties;
 import com.amazonaws.serverless.sample.springboot3.controller.PetsController;
 import com.amazonaws.serverless.sample.springboot3.filter.CognitoIdentityFilter;
 
@@ -17,7 +18,7 @@ import jakarta.servlet.Filter;
 
 
 @SpringBootApplication
-@Import({ PetsController.class })
+@Import({ PetsController.class ,PetProperties.class })
 public class Application {
 
     // silence console logging

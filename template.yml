@@ -24,6 +24,8 @@ Resources:
       Environment:
         Variables:
           MAIN_CLASS: com.amazonaws.serverless.sample.springboot3.Application
+          env.name: My Name is Robert!---  
+          env.number: 22
       Events:
         HttpApiEvent:
           Type: HttpApi

@@ -133,6 +133,7 @@ sam --version
 sam local start-api
 ```
 another terminal
+
 ```bash
 vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/pets' 
 
@@ -142,4 +143,7 @@ vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/pets' \
   "name": "Robert",
   "breed": "Norwegian Elkhound"
 }'
+
+vagrant@sam:~$ curl --location 'http://127.0.0.1:3000/pets/env'
+
 ```
